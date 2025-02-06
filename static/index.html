@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It Works</title>
+    <title>HTMX Test</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Well bugger me that was simple!</p>
+    <div id="test">
+        <button hx-post="/about"
+            hx-trigger="click"
+            hx-target="#test"
+            hx-swap="outerHTML">
+            Click Me!
+        </button>
+    </div>
 </body>
 </html>
