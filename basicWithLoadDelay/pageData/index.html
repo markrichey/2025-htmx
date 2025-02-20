@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Page Data Loading</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="leaveThisAlone"></div>
+    <div id="indexPage">
+        <button hx-post="/page/test"
+            hx-trigger="click"
+            hx-target="#indexPage"
+            hx-swap="outerHTML">
+            Click Me!
+        </button>
+    </div>
+</body>
+</html>
