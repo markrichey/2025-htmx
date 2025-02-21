@@ -9,6 +9,10 @@ import (
 
 func main() {
 
+	http.HandleFunc("/static/css", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/css/style.css")
+	})
+
 	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
 		var c, err = r.Cookie("cookieTest")
 		if err != nil {
